@@ -14,4 +14,4 @@
 	<CustomersSlide />
 	<PartnerSection />
 </main>
-<!-- continue working on second section -->
+<!-- continue working on third section -->

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import GridCards from './GridCards.svelte';
+
 	let partnerAdvantages = [
 		{
 			title: 'Free credits',
@@ -44,14 +46,5 @@
 		<div class="text-xl text-[#FF7F3E]">Be a partner</div>
 		<div class="text-textc1 text-3xl sm:text-4xl">CometChat partner advantages</div>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 py-12">
-		{#each partnerAdvantages as advantage, index (index)}
-			<div class="flex flex-col w-auto xxl:w-[400px]">
-				<!-- <embed type="image/svg+xml" src="/{advantage.title}.svg" /> -->
-				<img src="/{advantage.title}.svg" alt={advantage.title} width={39} height={38} />
-				<div class="text-textc1 text-xl">{advantage.title}</div>
-				<div class="text-textc1-75 text-lg text-wrap">{advantage.description}</div>
-			</div>
-		{/each}
-	</div>
+	<GridCards items={partnerAdvantages} />
 </div>
