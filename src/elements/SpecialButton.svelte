@@ -3,7 +3,7 @@
 </script>
 
 <button
-	class="relative bg-buttonc1 hover:bg-buttonc1-75 hover:shadow-lg rounded-2xl font-semibold py-2 px-4 mx-2"
+	class="relative bg-buttonc1 hover:bg-buttonc1-75 hover:shadow-lg rounded-2xl font-semibold text-sm md:text-base py-0.5 px-2 md:py-2 md:px-4 mx-2"
 	>{text}</button
 >
 
