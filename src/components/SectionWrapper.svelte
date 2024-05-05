@@ -3,4 +3,4 @@
 	// console.log(imageName);
 </script>
 
-<div class="h-[646px] bg-[url('/HeroBg.png')] bg-cover"><slot /></div>
+<div class="flex flex-col h-[646px] bg-[url('/HeroBg.png')] bg-cover"><slot /></div>
