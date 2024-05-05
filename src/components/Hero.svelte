@@ -3,7 +3,7 @@
 	import PartnerForm from './PartnerForm.svelte';
 </script>
 
-<div class="flex flex-grow items-center border border-red-700">
+<div class="flex flex-grow items-center">
 	<div class="w-[480px] h-[200px] ml-auto">
 		<h2 class="text-textc1 text-5xl">Join the CometChat partner universe</h2>
 		<p class="text-textc1-75 text-xl">

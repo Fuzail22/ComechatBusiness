@@ -26,7 +26,8 @@ export default {
 					90: '#6852D6E6', // 90% opacity
 					95: '#6852D6F2', // 95% opacity
 					100: '#6852D6' // 100% opacity
-				}
+				},
+				bgc1: '#0A0914'
 			}
 		}
 	},

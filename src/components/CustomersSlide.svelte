@@ -199,7 +199,6 @@
 			</defs>
 		</svg>
 
-		<!-- Duplicate set for looping -->
 		<svg width="54" height="32" viewBox="0 0 54 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g clip-path="url(#clip0_1_6803)">
 				<path
@@ -406,8 +405,8 @@
 		overflow: hidden;
 		position: relative;
 		width: 100%;
-		height: 100px; /* Set a fixed height */
-		background-color: black;
+		height: 100px;
+		background-color: #0a0914;
 	}
 
 	.logo-track {
@@ -417,8 +416,8 @@
 	}
 
 	.logo-track svg {
-		height: 80px; /* Adjust based on your preference */
-		flex: 0 0 auto; /* Do not grow or shrink */
+		height: 80px;
+		flex: 0 0 auto;
 		opacity: 0.8;
 		transition: opacity 0.3s ease;
 	}
@@ -432,7 +431,7 @@
 			transform: translateX(0);
 		}
 		to {
-			transform: translateX(-50%); /* Move by half the total width */
+			transform: translateX(-50%);
 		}
 	}
 </style>
