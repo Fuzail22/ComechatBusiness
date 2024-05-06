@@ -5,7 +5,9 @@
 	export let descriptionColor;
 </script>
 
-<div class="w-96">
-	<div class="text-xl" style="color:var({titleColor},white)">{title}</div>
-	<div class="text-3xl sm:text-4xl" style="color:var({descriptionColor},white)">{description}</div>
+<div class="sm:w-[500px]">
+	<div class="text-2xl" style="color:var({titleColor},white)">{title}</div>
+	<div class="text-3xl sm:text-5xl text-wrap" style="color:var({descriptionColor},white)">
+		{description}
+	</div>
 </div>

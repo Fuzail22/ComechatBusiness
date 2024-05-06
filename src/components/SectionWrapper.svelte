@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="flex flex-col bg-bgc1 bg-cover pt-0 p-6"
+	class="flex flex-col bg-bgc2 bg-cover pt-0 p-6"
 	style="background-image: {imagePath};min-height:{sectionHeight}"
 >
 	<slot />

@@ -5,6 +5,7 @@
 	import CustomersSlide from '../components/CustomersSlide.svelte';
 	import PartnerSection from '../components/PartnerSection.svelte';
 	import Programs from '../components/Programs.svelte';
+	import Faq from '../components/FAQ.svelte';
 </script>
 
 <main class="flex flex-col">
@@ -15,5 +16,6 @@
 	<CustomersSlide />
 	<PartnerSection />
 	<Programs />
+	<Faq />
 </main>
 <!-- continue working on third section -->
