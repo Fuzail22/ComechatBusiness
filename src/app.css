@@ -3,27 +3,36 @@
 @tailwind utilities;
 
 :root {
-	--textc1: #fafaff;
-	--textc1-50: #fafaff80;
-	--textc1-75: #fafaffbf;
-	--textc1-80: #fafaffcc;
-	--textc1-85: #fafaffd9;
-	--textc1-90: #fafaffe6;
-	--textc1-95: #fafafff2;
-	--textc1-100: #fafaff;
+	--textc1: rgba(250, 250, 255, 1);
+	--textc1-50: rgba(250, 250, 255, 0.5);
+	--textc1-75: rgba(250, 250, 255, 0.75);
+	--textc1-80: rgba(250, 250, 255, 0.8);
+	--textc1-85: rgba(250, 250, 255, 0.85);
+	--textc1-90: rgba(250, 250, 255, 0.9);
+	--textc1-95: rgba(250, 250, 255, 0.95);
+	--textc1-100: rgba(250, 250, 255, 1);
 
-	--textc2: #ff7f3e;
-	--textc3: #6852d6;
-	--textc4: #14131d;
+	--textc2: rgba(255, 127, 62, 1);
+	--textc3: rgba(104, 82, 214, 1);
 
-	--buttonc1: #6852d6;
-	--buttonc1-50: #6852d680;
-	--buttonc1-75: #6852d6bf;
-	--buttonc1-80: #6852d6cc;
-	--buttonc1-85: #6852d6d9;
-	--buttonc1-90: #6852d6e6;
-	--buttonc1-95: #6852d6f2;
-	--buttonc1-100: #6852d6;
+	--textc4: rgba(20, 19, 29, 1);
+	--textc4-50: rgba(20, 19, 29, 0.5);
+	--textc4-75: rgba(20, 19, 29, 0.75);
+	--textc4-80: rgba(20, 19, 29, 0.8);
+	--textc4-85: rgba(20, 19, 29, 0.85);
+	--textc4-90: rgba(20, 19, 29, 0.9);
+	--textc4-95: rgba(20, 19, 29, 0.95);
+	--textc4-100: rgba(20, 19, 29, 1);
 
-	--bgc1: #0a0914;
+	--buttonc1: rgba(104, 82, 214, 1);
+	--buttonc1-50: rgba(104, 82, 214, 0.5);
+	--buttonc1-75: rgba(104, 82, 214, 0.75);
+	--buttonc1-80: rgba(104, 82, 214, 0.8);
+	--buttonc1-85: rgba(104, 82, 214, 0.85);
+	--buttonc1-90: rgba(104, 82, 214, 0.9);
+	--buttonc1-95: rgba(104, 82, 214, 0.95);
+	--buttonc1-100: rgba(104, 82, 214, 1);
+
+	--bgc1: rgba(250, 250, 255, 1);
+	--bgc2: rgba(10, 9, 20, 1);
 }

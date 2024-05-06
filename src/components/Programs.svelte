@@ -1,4 +1,7 @@
 <script>
+	import GridCards from './GridCards.svelte';
+	import TitleCard from './TitleCard.svelte';
+
 	let programs = [
 		{
 			title: 'Affiliate partner program',
@@ -17,3 +20,13 @@
 		}
 	];
 </script>
+
+<div class="bg-bgc1 px-5 py-12 md:p-24">
+	<TitleCard
+		title="Our programs"
+		description="Types of partnerships programs"
+		titleColor="--textc3"
+		descriptionColor="--textc4"
+	/>
+	<GridCards items={programs} titleColor="--textc4" descriptionColor="--textc4-75" />
+</div>

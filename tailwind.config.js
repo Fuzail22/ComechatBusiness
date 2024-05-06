@@ -8,26 +8,27 @@ export default {
 			// }
 			colors: {
 				textc1: {
-					DEFAULT: '#FAFAFF',
-					50: '#FAFAFF80', // 50% opacity
-					75: '#FAFAFFBF', // 75% opacity
-					80: '#FAFAFFCC', // 80% opacity
-					85: '#FAFAFFD9', // 85% opacity
-					90: '#FAFAFFE6', // 90% opacity
-					95: '#FAFAFFF2', // 95% opacity
-					100: '#FAFAFF' // 100% opacity
+					DEFAULT: 'rgba(250, 250, 255, 1)',
+					50: 'rgba(250, 250, 255, 0.5)',
+					75: 'rgba(250, 250, 255, 0.75)',
+					80: 'rgba(250, 250, 255, 0.8)',
+					85: 'rgba(250, 250, 255, 0.85)',
+					90: 'rgba(250, 250, 255, 0.9)',
+					95: 'rgba(250, 250, 255, 0.95)',
+					100: 'rgba(250, 250, 255, 1)'
 				},
 				buttonc1: {
-					DEFAULT: '#6852D6',
-					50: '#6852D680', // 50% opacity
-					75: '#6852D6BF', // 75% opacity
-					80: '#6852D6CC', // 80% opacity
-					85: '#6852D6D9', // 85% opacity
-					90: '#6852D6E6', // 90% opacity
-					95: '#6852D6F2', // 95% opacity
-					100: '#6852D6' // 100% opacity
+					DEFAULT: 'rgba(104, 82, 214, 1)',
+					50: 'rgba(104, 82, 214, 0.5)',
+					75: 'rgba(104, 82, 214, 0.75)',
+					80: 'rgba(104, 82, 214, 0.8)',
+					85: 'rgba(104, 82, 214, 0.85)',
+					90: 'rgba(104, 82, 214, 0.9)',
+					95: 'rgba(104, 82, 214, 0.95)',
+					100: 'rgba(104, 82, 214, 1)'
 				},
-				bgc1: '#0A0914'
+				bgc1: 'rgba(250, 250, 255, 1)',
+				bgc2: 'rgba(10, 9, 20, 1)'
 			}
 		}
 	},
