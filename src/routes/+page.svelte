@@ -26,4 +26,3 @@
 		<SecondaryLinks />
 	</SectionWrapper>
 </main>
-<!-- continue working on third section -->

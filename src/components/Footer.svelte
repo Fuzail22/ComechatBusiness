@@ -171,11 +171,11 @@
 	];
 </script>
 
-<div class="px-16">
+<div class="px-16 mt-14">
 	<Brand />
-	<div class="flex gap-20">
+	<div class="flex justify-between gap-20 backdrop-blur-3xl">
 		{#each items as item, index (index)}
-			<div class="flex flex-col gap-4">
+			<div class="flex flex-col gap-4 w-[268px]">
 				<h4 class="text-textc3 mt-4">{item.heading}</h4>
 				{#if item.subHeading1}
 					<h6 class="text-textc1-50">{item.subHeading1.heading}</h6>
