@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import Brand from '../elements/Brand.svelte';
 	import Link from '../elements/Link.svelte';
 
@@ -169,42 +170,101 @@
 		{ heading: 'Competitors', items: ['SendBird', 'GetStream', 'Applozic', 'Twilio', 'PubNub'] },
 		{ heading: 'Company', items: ['About us', 'Careers', 'Partners', 'Pricing', 'Chat with us'] }
 	];
+
+	let isLesserThanMd;
+	let activeItem = '';
+	onMount(() => {
+		const mdBreakpoint = 638;
+
+		const checkViewportWidth = () => {
+			isLesserThanMd = window.innerWidth <= mdBreakpoint;
+		};
+		console.log({ isLesserThanMd });
+		checkViewportWidth();
+
+		window.addEventListener('resize', checkViewportWidth);
+
+		return () => {
+			window.removeEventListener('resize', checkViewportWidth);
+		};
+	});
 </script>
 
-<div class="px-16 mt-14">
+<div class="px-5 py-12 md:px-24 mt-14">
 	<Brand />
-	<div class="flex justify-between gap-20 backdrop-blur-3xl">
+	<div class="flex flex-col sm:flex-row justify-between lg:gap-20 backdrop-blur-3xl">
 		{#each items as item, index (index)}
-			<div class="flex flex-col gap-4 w-[268px]">
-				<h4 class="text-textc3 mt-4">{item.heading}</h4>
-				{#if item.subHeading1}
-					<h6 class="text-textc1-50">{item.subHeading1.heading}</h6>
-					{#each item.subHeading1.items as linkItem, index (index)}
-						<Link {linkItem} />
-					{/each}
+			<div class="lg:w-[268px]">
+				{#if isLesserThanMd}<button
+						class="flex text-textc3 mt-4 w-full"
+						on:click={() => {
+							if (activeItem == item.heading) activeItem = '';
+							else activeItem = item.heading;
+						}}
+						>{item.heading}
+						<img
+							class="inline ml-auto"
+							src="/plus.svg"
+							alt="plus-icon"
+							width="18"
+							height="18"
+						/></button
+					>
+				{:else}
+					<h4 class="text-textc3 mt-4">{item.heading}</h4>
 				{/if}
-				{#if item.subHeading2}
-					<h6 class="text-textc1-50">{item.subHeading2.heading}</h6>
-					{#each item.subHeading2.items as linkItem, index (index)}
-						<Link {linkItem} />
-					{/each}
-				{/if}
-				{#if item.subHeading3}
-					<h6 class="text-textc1-50">{item.subHeading3.heading}</h6>
-					{#each item.subHeading3.items as linkItem, index (index)}
-						<Link {linkItem} />
-					{/each}
+				{#if !isLesserThanMd || item.heading == activeItem}
+					<div class="flex flex-col mt-4 gap-4 lg:w-[268px]">
+						{#if item.subHeading1}
+							<h6 class="text-textc1-50">{item.subHeading1.heading}</h6>
+							{#each item.subHeading1.items as linkItem, index (index)}
+								<Link {linkItem} />
+							{/each}
+						{/if}
+						{#if item.subHeading2}
+							<h6 class="text-textc1-50">{item.subHeading2.heading}</h6>
+							{#each item.subHeading2.items as linkItem, index (index)}
+								<Link {linkItem} />
+							{/each}
+						{/if}
+						{#if item.subHeading3}
+							<h6 class="text-textc1-50">{item.subHeading3.heading}</h6>
+							{#each item.subHeading3.items as linkItem, index (index)}
+								<Link {linkItem} />
+							{/each}
+						{/if}
+					</div>
 				{/if}
 			</div>
 		{/each}
 		<div>
 			{#each items2 as item, index (index)}
-				<div class="flex flex-col gap-4">
-					<h4 class="text-textc3 mt-4">{item.heading}</h4>
-					<h6 class="text-textc1-50">{item.heading}</h6>
-					{#each item.items as linkItem, index (index)}
-						<Link {linkItem} />
-					{/each}
+				<div>
+					{#if isLesserThanMd}<button
+							class="flex text-textc3 mt-4 w-full"
+							on:click={() => {
+								if (activeItem == item.heading) activeItem = '';
+								else activeItem = item.heading;
+							}}
+							>{item.heading}
+							<img
+								class="inline ml-auto"
+								src="/plus.svg"
+								alt="plus-icon"
+								width="18"
+								height="18"
+							/></button
+						>
+					{:else}
+						<h4 class="text-textc3 mt-4">{item.heading}</h4>
+					{/if}
+					{#if !isLesserThanMd || item.heading == activeItem}
+						<div class="flex flex-col mt-4 gap-4 lg:w-[268px]">
+							{#each item.items as linkItem, index (index)}
+								<Link {linkItem} />
+							{/each}
+						</div>
+					{/if}
 				</div>
 			{/each}
 		</div>
