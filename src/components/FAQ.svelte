@@ -32,17 +32,18 @@
 	let activeQuestion = -1;
 </script>
 
-<div class="flex flex-col items-center justify-center w-full bg-bgc1 px-5 py-12 md:p-24">
+<div class="flex flex-col items-center justify-center w-full bg-bgc1 px-5 py-12 md:p-20">
 	<TitleCard
 		title="FAQ's"
 		description="We want to help you with all your doubts"
 		titleColor="--textc2"
 		descriptionColor="--textc4"
+		centerText={true}
 	/>
 	<div class="flex flex-col gap-4 mt-8">
 		{#each faqs as faq, index (index)}
 			<button
-				class="relative w-[318px] sm:w-[638px] md:w-[751px text-start text-lg md:text-[22px] bg-cardbgc1 p-4 md:p-6 rounded-[20px] border border-cardborderc1 backdrop-blur-xl"
+				class="relative w-[318px] sm:w-[638px] md:w-[751px] text-start text-lg font-medium md:text-[22px] bg-cardbgc1 p-4 md:p-6 rounded-[20px] border border-cardborderc1 backdrop-blur-xl"
 				on:click={() => {
 					if (activeQuestion == index) {
 						activeQuestion = -1;

@@ -6,6 +6,9 @@
 	import PartnerSection from '../components/PartnerSection.svelte';
 	import Programs from '../components/Programs.svelte';
 	import Faq from '../components/FAQ.svelte';
+	import PreFooter from '../components/PreFooter.svelte';
+	import Footer from '../components/Footer.svelte';
+	import SecondaryLinks from '../components/SecondaryLinks.svelte';
 </script>
 
 <main class="flex flex-col">
@@ -17,5 +20,10 @@
 	<PartnerSection />
 	<Programs />
 	<Faq />
+	<SectionWrapper imageName="Pre-footer.png" sectionHeight="735px" bgSize="contain">
+		<PreFooter />
+		<Footer />
+		<SecondaryLinks />
+	</SectionWrapper>
 </main>
 <!-- continue working on third section -->
