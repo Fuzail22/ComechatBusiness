@@ -33,7 +33,7 @@
 	</FixedWidthProvider>
 	<FixedWidthProvider
 		classList="bg-bgc2 pb-10"
-		imageName="Modified-Pre-footer.png"
+		imageName="Cropped-Modified-Pre-footer.png"
 		sectionHeight="735px"
 		bgSize="contain"
 	>

@@ -122,7 +122,7 @@
 	});
 </script>
 
-<div class="py-12 px-12 lg:px-24 mt-8">
+<div class="py-12 px-6 lg:px-24 mt-8">
 	<Brand />
 	<br /><br />
 	<Navigation breakpoint={1024} />

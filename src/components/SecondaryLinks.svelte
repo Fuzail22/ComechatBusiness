@@ -6,7 +6,7 @@
 	let socials = ['Facebook', 'LinkedIn', 'Instagram', 'Twitter', 'GitHub'];
 </script>
 
-<div class="flex flex-col-reverse gap-y-11 px-12 lg:flex-row lg:px-24">
+<div class="flex flex-col-reverse gap-y-11 px-6 lg:flex-row lg:px-24">
 	<div class="inline-flex gap-6">
 		{#each legalPages as linkItem, index (index)}
 			<Link {linkItem} classList="text-xs" />
