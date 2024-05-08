@@ -109,7 +109,6 @@
 		const checkViewportWidth = () => {
 			isLesserThanMdBreakpoint = window.innerWidth <= breakpoint;
 		};
-		// console.log({ isLesserThanMdBreakpoint });
 		checkViewportWidth();
 
 		window.addEventListener('resize', checkViewportWidth);

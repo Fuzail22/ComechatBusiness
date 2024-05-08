@@ -50,7 +50,6 @@
 					} else {
 						activeQuestion = index;
 					}
-					console.log(activeQuestion);
 				}}
 			>
 				<div class="flex">

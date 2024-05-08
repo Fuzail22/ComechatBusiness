@@ -3,7 +3,7 @@
 	import HamMenu from '../elements/HamMenu.svelte';
 	import SpecialButton from '../elements/SpecialButton.svelte';
 	import Navigation from '../components/Navigation.svelte';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import FixedWidthProvider from './FixedWidthProvider.svelte';
 	let navItems = ['Platforms', 'Solutions', 'Developers', 'Resources', 'Pricing'];
@@ -33,7 +33,13 @@
 			<Brand />
 			<nav class="hidden lg:inline-flex gap-12 ml-auto items-center">
 				{#each navItems as item, index (index)}
-					<a href="#{item}" class="text-textc1-85 hover:text-textc1-95">{item}</a>
+					{#if item == 'Pricing'}
+						<a href="https://www.cometchat.com/pricing" class="text-textc1-85 hover:text-textc1-95"
+							>{item}</a
+						>
+					{:else}
+						<a href="#{item}" class="text-textc1-85 hover:text-textc1-95">{item}</a>
+					{/if}
 				{/each}
 			</nav>
 			<div class="flex items-center gap-4 sm:flex-row ml-auto">

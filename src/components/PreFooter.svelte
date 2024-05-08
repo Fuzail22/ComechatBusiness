@@ -3,7 +3,7 @@
 	import SpecialButton from '../elements/SpecialButton.svelte';
 </script>
 
-<div class="flex flex-col gap-8 items-center justify-center w-full px-5 py-12 md:py-32">
+<div class="flex flex-col gap-8 font-medium items-center justify-center w-full px-5 py-12 md:py-32">
 	<div class="sm:w-[500px] backdrop-blur-sm" style="text-align:center;">
 		<div class="text-3xl sm:text-5xl text-wrap" style="color:var(--textc1,white)">
 			Get started for free

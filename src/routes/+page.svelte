@@ -11,7 +11,7 @@
 	import FixedWidthProvider from '../components/FixedWidthProvider.svelte';
 </script>
 
-<main class="flex flex-col font-semibold">
+<main class="flex flex-col">
 	<Header />
 	<FixedWidthProvider
 		classList="bg-bgc2 p-2"

@@ -5,7 +5,6 @@
 	export let bgSize = 'cover';
 	export let addBefore = false;
 	let imagePath = imageName !== '' ? `url('/${imageName}')` : '';
-	console.log(imagePath);
 </script>
 
 <div
