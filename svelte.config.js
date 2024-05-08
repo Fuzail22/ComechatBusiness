@@ -12,12 +12,14 @@
 import adapter from '@sveltejs/adapter-static';
 export default {
 	kit: {
+		prerender: {
+			handleMissingId: 'warn'
+		},
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
 			fallback: undefined,
 			precompress: false,
-			handleMissingId: 'warn',
 			strict: true
 		})
 	}
