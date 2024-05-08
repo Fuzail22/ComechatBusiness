@@ -55,9 +55,9 @@
 	{#if isNavigationEnabled}
 		<div
 			id="hamMenu"
-			class="flex flex-col lg:hidden px-2 py-2"
-			style="background:url('/Stars.png'),linear-gradient(to bottom right,rgba(20, 19, 29, 1) 70%,rgba(104, 82, 214, 1));backdrop-filter: blur(100px);background-size:cover;width:100%;height:93vh;overflow-y:auto;color:var(--textc1,white);padding:0.5rem 0.5rem 1.5rem 0.5rem"
-			transition:slide={{ duration: 500 }}
+			class="flex flex-col lg:hidden px-2 py-2 rounded-xl"
+			style="background:url('/Stars.png'),linear-gradient(to bottom right,rgba(20, 19, 29, 1) 70%,rgba(104, 82, 214, 1));backdrop-filter: blur(100px);background-size:cover;width:100%;height:100%;overflow-y:auto;color:var(--textc1,white);padding:0.5rem 0.5rem 1.5rem 0.5rem"
+			transition:slide={{ duration: 100 }}
 		>
 			<Navigation breakpoint={1024} />
 			<SpecialButton classList="mt-auto" text="Schedule a demo" />
