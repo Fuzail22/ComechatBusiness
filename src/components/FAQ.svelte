@@ -40,7 +40,7 @@
 		descriptionColor="--textc4"
 		centerText={true}
 	/>
-	<div class="flex flex-col gap-4 mt-8">
+	<div class="flex flex-col gap-4">
 		{#each faqs as faq, index (index)}
 			<button
 				class="relative sm:w-[638px] md:w-[751px] text-start text-lg font-medium md:text-[22px] bg-cardbgc1 p-4 md:p-6 rounded-[20px] border border-cardborderc1 backdrop-blur-xl"

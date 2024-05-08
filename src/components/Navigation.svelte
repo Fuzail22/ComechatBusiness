@@ -165,7 +165,7 @@
 			{/if}
 		</div>
 	{/each}
-	<div>
+	<div class="flex flex-col gap-4">
 		{#each items2 as item, index (index)}
 			<div id={item.heading}>
 				{#if isLesserThanMdBreakpoint}<button

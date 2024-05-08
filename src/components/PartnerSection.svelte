@@ -49,9 +49,5 @@
 		titleColor="--textc2"
 		descriptionColor="--textc1"
 	/>
-	<!-- <div class="w-80">
-		<div class="text-xl text-[#FF7F3E]">Be a partner</div>
-		<div class="text-textc1 text-3xl sm:text-4xl">CometChat partner advantages</div>
-	</div> -->
 	<GridCards items={partnerAdvantages} titleColor="--textc1" descriptionColor="--textc1-75" />
 </div>

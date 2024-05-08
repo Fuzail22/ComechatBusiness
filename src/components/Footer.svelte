@@ -123,9 +123,9 @@
 	});
 </script>
 
-<div class="py-12 px-12 lg:px-24 mt-14">
+<div class="py-12 px-12 lg:px-24 mt-8">
 	<Brand />
-
+	<br /><br />
 	<Navigation breakpoint={1024} />
 	<div
 		class="faded-line my-4 w-full"

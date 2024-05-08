@@ -27,7 +27,10 @@
 	// });
 </script>
 
-<div style="text-align:{centerText ? 'center' : 'left'};" class="sm:w-[500px] font-semibold">
+<div
+	class="sm:w-[500px] font-semibold mb-12 md:mb-24"
+	style="text-align:{centerText ? 'center' : 'left'};"
+>
 	<div class="text-2xl" style="color:var({titleColor},white);">
 		{title}
 	</div>
