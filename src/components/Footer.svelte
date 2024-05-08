@@ -2,75 +2,8 @@
 	import { onMount } from 'svelte';
 	import Brand from '../elements/Brand.svelte';
 	import Link from '../elements/Link.svelte';
+	import Navigation from './Navigation.svelte';
 
-	let Features = [
-		'Chat & Messaging',
-		'Voice & Video Calls',
-		'Security & Compliance',
-		'Extensions',
-		'Features at a glance',
-		'Webhooks & Bots',
-		'Moderation',
-		'Analytics & Insights'
-	];
-	let Implementation = ['Widgets', 'UI Kits', 'SDKs & APIs'];
-	let Technologies = [
-		'React Chat SDK & API',
-		'Angular Chat SDK & API',
-		'Vue Chat SDK & API',
-		'IOS Swift Chat SDK & API',
-		'Android Kotlin Chat SDK & API',
-		'Android Java Chat SDK & API',
-		'React Native Chat SDK & API',
-		'Ionic/Capacitor Chat SDK & API',
-		'WordPress Chat SDK & API',
-		'Lavarel/PHP Chat SDK & API',
-		'Flutter Chat SDK & API',
-		'Next.js Chat SDK & API'
-	];
-	let By_Use_cases = [
-		'Social Community',
-		'Marketplace',
-		'Healthcare',
-		'Education',
-		'Virtual Events',
-		'On-Demand Service',
-		'Dating Apps',
-		'Gaming'
-	];
-	let By_Organization_Type = ['Enterprise', 'Startups'];
-	let Technologies_documentation = [
-		'React',
-		'Angular',
-		'Vue',
-		'IOS Swift',
-		'Android Kotlin',
-		'Android Java',
-		'React Native',
-		'Ionic/Capacitor',
-		'WordPress',
-		'Lavarel/PHP',
-		'Flutter',
-		'Next.js'
-	];
-	let Documentation = [
-		'Documentation',
-		'Product updates',
-		'Tutorials',
-		'Open-source Apps',
-		'Product status',
-		'Glossary'
-	];
-	let Resources = [
-		'Customer stories',
-		'Blog',
-		'Give feedback',
-		'Community forum',
-		'Help center',
-		'Partners'
-	];
-	let Competitors = ['SendBird', 'GetStream', 'Applozic', 'Twilio', 'PubNub'];
-	let Company = ['About us', 'Careers', 'Partners', 'Pricing', 'Chat with us'];
 	let items = [
 		{
 			heading: 'Platform',
@@ -190,83 +123,8 @@
 	});
 </script>
 
-<div class="px-5 py-12 md:px-24 mt-14">
+<div class="py-12 md:px-24 mt-14">
 	<Brand />
-	<div class="flex flex-col sm:flex-row justify-between lg:gap-20 backdrop-blur-3xl">
-		{#each items as item, index (index)}
-			<div class="lg:w-[268px]">
-				{#if isLesserThanMd}<button
-						class="flex text-textc3 mt-4 w-full"
-						on:click={() => {
-							if (activeItem == item.heading) activeItem = '';
-							else activeItem = item.heading;
-						}}
-						>{item.heading}
-						<img
-							class="inline ml-auto"
-							src="/plus.svg"
-							alt="plus-icon"
-							width="18"
-							height="18"
-						/></button
-					>
-				{:else}
-					<h4 class="text-textc3 mt-4">{item.heading}</h4>
-				{/if}
-				{#if !isLesserThanMd || item.heading == activeItem}
-					<div class="flex flex-col mt-4 gap-4 lg:w-[268px]">
-						{#if item.subHeading1}
-							<h6 class="text-textc1-50">{item.subHeading1.heading}</h6>
-							{#each item.subHeading1.items as linkItem, index (index)}
-								<Link {linkItem} />
-							{/each}
-						{/if}
-						{#if item.subHeading2}
-							<h6 class="text-textc1-50">{item.subHeading2.heading}</h6>
-							{#each item.subHeading2.items as linkItem, index (index)}
-								<Link {linkItem} />
-							{/each}
-						{/if}
-						{#if item.subHeading3}
-							<h6 class="text-textc1-50">{item.subHeading3.heading}</h6>
-							{#each item.subHeading3.items as linkItem, index (index)}
-								<Link {linkItem} />
-							{/each}
-						{/if}
-					</div>
-				{/if}
-			</div>
-		{/each}
-		<div>
-			{#each items2 as item, index (index)}
-				<div>
-					{#if isLesserThanMd}<button
-							class="flex text-textc3 mt-4 w-full"
-							on:click={() => {
-								if (activeItem == item.heading) activeItem = '';
-								else activeItem = item.heading;
-							}}
-							>{item.heading}
-							<img
-								class="inline ml-auto"
-								src="/plus.svg"
-								alt="plus-icon"
-								width="18"
-								height="18"
-							/></button
-						>
-					{:else}
-						<h4 class="text-textc3 mt-4">{item.heading}</h4>
-					{/if}
-					{#if !isLesserThanMd || item.heading == activeItem}
-						<div class="flex flex-col mt-4 gap-4 lg:w-[268px]">
-							{#each item.items as linkItem, index (index)}
-								<Link {linkItem} />
-							{/each}
-						</div>
-					{/if}
-				</div>
-			{/each}
-		</div>
-	</div>
+
+	<Navigation breakpoint={640} />
 </div>

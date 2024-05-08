@@ -12,8 +12,8 @@
 </script>
 
 <main class="flex flex-col">
+	<Header />
 	<SectionWrapper imageName="HeroBg.png" sectionHeight="646px">
-		<Header />
 		<Hero />
 	</SectionWrapper>
 	<CustomersSlide />
