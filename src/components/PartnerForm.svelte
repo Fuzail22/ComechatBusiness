@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="w-5/6 md:w-[528px] min-h-[434px] rounded-2xl mx-auto px-4 py-2 text-textc1-75"
+	class="w-5/6 md:w-[528px] min-h-[434px] rounded-2xl mx-auto my-8 px-4 py-2 text-textc1-75"
 	style="background-color: rgba(250, 250, 255, 0.08);border: 1px solid rgba(250, 250, 255, 0.04);
 backdrop-filter: blur(100px);box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
 >

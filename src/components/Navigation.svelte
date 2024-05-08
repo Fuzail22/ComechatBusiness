@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 	import Link from '../elements/Link.svelte';
 	export let breakpoint = 640;
-
 	let isLesserThanMdBreakpoint;
 	let activeItem = '';
 	let items = [
@@ -120,11 +120,9 @@
 	});
 </script>
 
-<div
-	class="flex flex-col gap-4 mb-4 lg:flex-row sm:flex-wrap justify-between lg:gap-20 backdrop-blur-3xl"
->
+<div class="flex flex-col gap-4 mb-4 lg:flex-row flex-wrap justify-between backdrop-blur-sm">
 	{#each items as item, index (index)}
-		<div id={item.heading} class="lg:w-[268px]">
+		<div id={item.heading} class="">
 			{#if isLesserThanMdBreakpoint}<button
 					class="flex text-textc3 mt-4 w-full"
 					on:click={() => {
@@ -133,7 +131,7 @@
 					}}
 					>{item.heading}
 					<img
-						class="inline ml-auto"
+						class="inline ml-auto {activeItem == item.heading ? 'rotate' : ''}"
 						src="/plus.svg"
 						alt="plus-icon"
 						width="18"
@@ -144,7 +142,7 @@
 				<h4 class="text-textc3 mt-4">{item.heading}</h4>
 			{/if}
 			{#if !isLesserThanMdBreakpoint || item.heading == activeItem}
-				<div class="flex flex-col mt-4 gap-4 lg:w-[268px]">
+				<div class="flex flex-col mt-4 gap-4" transition:slide={{ duration: 500 }}>
 					{#if item.subHeading1}
 						<h6 class="text-textc1-50">{item.subHeading1.heading}</h6>
 						{#each item.subHeading1.items as linkItem, index (index)}
@@ -167,34 +165,47 @@
 			{/if}
 		</div>
 	{/each}
-
-	{#each items2 as item, index (index)}
-		<div id={item.heading}>
-			{#if isLesserThanMdBreakpoint}<button
-					class="flex text-textc3 mt-4 w-full"
-					on:click={() => {
-						if (activeItem == item.heading) activeItem = '';
-						else activeItem = item.heading;
-					}}
-					>{item.heading}
-					<img
-						class="inline ml-auto"
-						src="/plus.svg"
-						alt="plus-icon"
-						width="18"
-						height="18"
-					/></button
-				>
-			{:else}
-				<h4 class="text-textc3 mt-4">{item.heading}</h4>
-			{/if}
-			{#if !isLesserThanMdBreakpoint || item.heading == activeItem}
-				<div class="flex flex-col mt-4 gap-4 lg:w-[268px]">
-					{#each item.items as linkItem, index (index)}
-						<Link {linkItem} />
-					{/each}
-				</div>
-			{/if}
-		</div>
-	{/each}
+	<div>
+		{#each items2 as item, index (index)}
+			<div id={item.heading}>
+				{#if isLesserThanMdBreakpoint}<button
+						class="flex text-textc3 mt-4 w-full"
+						on:click={() => {
+							if (activeItem == item.heading) activeItem = '';
+							else activeItem = item.heading;
+						}}
+						>{item.heading}
+						<img
+							class="inline ml-auto {activeItem == item.heading ? 'rotate' : ''}"
+							src="/plus.svg"
+							alt="plus-icon"
+							width="18"
+							height="18"
+						/></button
+					>
+				{:else}
+					<h4 class="text-textc3 mt-4">{item.heading}</h4>
+				{/if}
+				{#if !isLesserThanMdBreakpoint || item.heading == activeItem}
+					<div class="flex flex-col mt-4 gap-4" transition:slide={{ duration: 500 }}>
+						{#each item.items as linkItem, index (index)}
+							<Link {linkItem} />
+						{/each}
+					</div>
+				{/if}
+			</div>
+		{/each}
+	</div>
 </div>
+
+<style>
+	@keyframes rotate {
+		to {
+			transform: rotate(-45deg);
+		}
+	}
+
+	.rotate {
+		animation: rotate 0.1s linear forwards;
+	}
+</style>

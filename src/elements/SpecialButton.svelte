@@ -4,7 +4,7 @@
 </script>
 
 <button
-	class="relative bg-buttonc1 hover:bg-buttonc1-75 hover:shadow-lg rounded-2xl font-semibold text-sm px-2 py-2 md:px-4 mx-2 {classList}"
+	class="relative bg-buttonc1 hover:bg-buttonc1-75 hover:shadow-lg rounded-xl font-semibold text-sm px-2 py-2 md:px-4 mx-2 {classList}"
 	>{text}</button
 >
 

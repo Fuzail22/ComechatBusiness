@@ -32,7 +32,7 @@
 	let activeQuestion = -1;
 </script>
 
-<div class="flex flex-col items-center justify-center w-full bg-bgc1 px-5 py-12 md:p-20">
+<div class="flex flex-col items-center justify-center w-full bg-bgc1 px-5 py-12 md:p-24">
 	<TitleCard
 		title="FAQ's"
 		description="We want to help you with all your doubts"

@@ -40,4 +40,14 @@
 }
 html {
 	font-family: Satoshi-Variable;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+	display: none;
+}
+
+#hamMenu {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }

@@ -123,8 +123,13 @@
 	});
 </script>
 
-<div class="py-12 md:px-24 mt-14">
+<div class="py-12 px-12 lg:px-24 mt-14">
 	<Brand />
 
-	<Navigation breakpoint={640} />
+	<Navigation breakpoint={1024} />
+	<div
+		class="faded-line my-4 w-full"
+		style="height: 1.5px;
+    background: linear-gradient(to right, transparent, white, transparent);"
+	/>
 </div>
