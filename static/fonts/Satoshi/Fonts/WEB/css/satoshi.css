@@ -21,7 +21,7 @@
 @font-face {
 	font-family: 'Satoshi-Variable';
 	src:
-		url('../fonts/Satoshi/Fonts/WEB/fonts/Satoshi-Variable.woff2') format('woff2'),
+		url('/fonts/Satoshi/Fonts/WEB/fonts/Satoshi-Variable.woff2') format('woff2'),
 		url('/fonts/Satoshi/Fonts/WEB/fonts/Satoshi-Variable.woff') format('woff'),
 		url('/fonts/Satoshi/Fonts/WEB/fonts/Satoshi-Variable.ttf') format('truetype');
 	font-weight: 300 900;
