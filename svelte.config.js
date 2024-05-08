@@ -17,6 +17,7 @@ export default {
 			assets: 'build',
 			fallback: undefined,
 			precompress: false,
+			handleMissingId: 'warn',
 			strict: true
 		})
 	}

@@ -27,9 +27,7 @@
 	});
 </script>
 
-<!-- <div class="flex fixed justify-center w-full bg-bgc2 z-50"> -->
 <FixedWidthProvider classList="bg-bgc2 fixed z-50">
-	<!-- <div class=""> -->
 	{#if showNav || isNavigationEnabled}
 		<div class="flex items-center py-3 px-4 md:px-8 md:py-4 text-textc1 text-sm">
 			<Brand />
@@ -59,10 +57,7 @@
 			<SpecialButton classList="mt-auto" text="Schedule a demo" />
 		</div>
 	{/if}
-	<!-- </div> -->
 </FixedWidthProvider>
-
-<!-- </div> -->
 
 <style>
 	#hamMenu {
